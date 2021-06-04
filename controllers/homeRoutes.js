@@ -1,12 +1,26 @@
 const router = require('express').Router();
-const { Blog, User } = require('../models');
+const { Blog, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    // Get all projects and JOIN with user data
+    // Get all blog posts and JOIN with user data
     const blogData = await Blog.findAll({
       include: [
+        {
+          model: Comment,
+          attributes: [
+            'id',
+            'comment',
+            'user_id',
+            'blog_id',
+            'date_created'
+          ],
+          include: {
+            model: User,
+            attributes: ['name']
+          }
+        },
         {
           model: User,
           attributes: ['name'],
@@ -31,6 +45,20 @@ router.get('/blog/:id', async (req, res) => {
   try {
     const blogData = await Blog.findByPk(req.params.id, {
       include: [
+        {
+          model: Comment,
+          attributes: [
+            'id',
+            'comment',
+            'user_id',
+            'blog_id',
+            'date_created'
+          ],
+          include: {
+            model: User,
+            attributes: ['name']
+          }
+        },
         {
           model: User,
           attributes: ['name'],
