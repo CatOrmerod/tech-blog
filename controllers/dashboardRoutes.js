@@ -41,7 +41,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-router.get('/blog/:id', async (req, res) => {
+router.get('/update/:id', async (req, res) => {
     try {
       const blogData = await Blog.findByPk(req.params.id, {
         include: [
@@ -68,7 +68,7 @@ router.get('/blog/:id', async (req, res) => {
   
       const blog = blogData.get({ plain: true });
   
-      res.render('blog', {
+      res.render('update', {
         ...blog,
         logged_in: req.session.logged_in
       });
