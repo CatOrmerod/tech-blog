@@ -12,7 +12,8 @@
         <textarea class="form-input" id="blog-content" name="blog-content">{{blog.content}}</textarea>
       </div>
       <div class="form-group">
-        <button type="submit" class="btn btn-primary">Update</button>
+        <button type="submit" class="btn btn-primary" data-id="{{blog.id}}">Save Update</button>
+        <button class="btn btn-sm btn-danger" data-id="{{blog.id}}">Delete Blog Post</button>
       </div>
     </form>
   </div>

@@ -40,9 +40,6 @@ const delButtonHandler = async (event) => {
 const updateFormHandler = async (event) => {
   event.preventDefault();
 
-  if (event.target.hasAttribute('data-id')) {
-    const id = event.target.getAttribute('data-id');
-
     const title = document.querySelector('#blog-title').value.trim();
     const content = document.querySelector('#blog-content').value.trim();
 
@@ -94,7 +91,7 @@ document
 
 document
   .querySelector('.update-blog-form')
-  .addEventListener('click', updateFormHandler);
+  .addEventListener('submit', updateFormHandler);
 
 document
   .querySelector('.comment-list')
