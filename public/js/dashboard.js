@@ -86,11 +86,11 @@ document
   .addEventListener('submit', newFormHandler);
 
 document
-  .querySelector('.blog-list')
+  .querySelector('#deleteBtn')
   .addEventListener('click', delButtonHandler);
 
 document
-  .querySelector('.update-blog-form')
+  .querySelector('#updateBtn')
   .addEventListener('submit', updateFormHandler);
 
 document
