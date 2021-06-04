@@ -93,7 +93,7 @@ document
   .addEventListener('click', delButtonHandler);
 
 document
-  .querySelector('.blog-list')
+  .querySelector('.update-blog-form')
   .addEventListener('click', updateFormHandler);
 
 document
