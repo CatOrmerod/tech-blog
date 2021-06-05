@@ -2,10 +2,13 @@ const router = require('express').Router();
 const { Blog, User, Comment } = require('../models');
 const withAuth = require('../utils/auth');
 
-router.get('/', async (req, res) => {
+router.get('/', withAuth, async (req, res) => {
     try {
       // Get all blog posts and JOIN with user data
       const blogData = await Blog.findAll({
+        where: {
+          user_id: req.session.user_id
+        },
         include: [
           {
             model: Comment,
@@ -67,6 +70,8 @@ router.get('/update/:id', async (req, res) => {
       });
   
       const blog = blogData.get({ plain: true });
+      console.log(blog);
+
   
       res.render('update', {
         ...blog,
