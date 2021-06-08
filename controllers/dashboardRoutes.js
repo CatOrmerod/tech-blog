@@ -35,6 +35,7 @@ router.get('/', withAuth, async (req, res) => {
       const blogs = blogData.map((blog) => blog.get({ plain: true }));
   
       // Pass serialized data and session flag into template
+      console.log("logged in status", req.session.logged_in)
       res.render('dashboard', { 
         blogs, 
         logged_in: req.session.logged_in 

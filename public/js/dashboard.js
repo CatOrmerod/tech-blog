@@ -40,34 +40,35 @@ const delButtonHandler = async (event) => {
 const updateFormHandler = async (event) => {
   event.preventDefault();
 
-    const title = document.querySelector('#blog-title').value.trim();
-    const content = document.querySelector('#blog-content').value.trim();
+  const title = document.querySelector('#blog-title').value.trim();
+  const content = document.querySelector('#blog-content').value.trim();
+  const id = document.querySelector('#updateBtn').getAttribute('data-id');
 
-    const response = await fetch(`/api/blogs/${id}`, {
-      method: 'PUT',
-      body: JSON.stringify({ title, content }),
-      headers: {
-        'Content-Type': 'application/json',
-      },
-    });
+  const response = await fetch(`/api/blogs/${id}`, {
+    method: 'PUT',
+    body: JSON.stringify({ title, content }),
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
 
-    if (response.ok) {
-      document.location.replace('/dashboard');
-    } else {
-      alert('Failed to update blog');
-    }
+  if (response.ok) {
+    document.location.replace('/dashboard');
+  } else {
+    alert('Failed to update blog');
   }
 };
 
 const commentFormHandler = async (event) => {
   event.preventDefault();
 
-  const comment = document.querySelector('#comment').value.trim();
+  const comment = document.querySelector('#blog-comment').value.trim();
+  const blog_id = document.querySelector('#commentBtn').getAttribute('data-id');
 
   if (comment) {
-    const response = await fetch(`/api/comments`, {
+    const response = await fetch(`/api/comments/`, {
       method: 'POST',
-      body: JSON.stringify({ comment }),
+      body: JSON.stringify({ comment: comment, blog_id: blog_id }),
       headers: {
         'Content-Type': 'application/json',
       },
@@ -81,18 +82,19 @@ const commentFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector('.new-blog-form')
-  .addEventListener('submit', newFormHandler);
-
-document
-  .querySelector('#deleteBtn')
-  .addEventListener('click', delButtonHandler);
-
-document
-  .querySelector('#updateBtn')
-  .addEventListener('submit', updateFormHandler);
-
-document
-  .querySelector('.comment-list')
-  .addEventListener('click', commentFormHandler);
+const newBlogForm = document.querySelector('#new-blog-form');
+if (newBlogForm) {
+  newBlogForm.addEventListener('submit', newFormHandler);
+}
+const updateBlogForm = document.querySelector('#update-blog-form');
+if (updateBlogForm) {
+  updateBlogForm.addEventListener('submit', updateFormHandler);
+}
+const newCommentForm = document.querySelector('#add-comment-form');
+if (newCommentForm) {
+  newCommentForm.addEventListener('submit', commentFormHandler);
+}
+const deleteBtn = document.querySelector('#deleteBtn');
+if (delButtonHandler) {
+  deleteBtn.addEventListener('click', delButtonHandler);
+}
