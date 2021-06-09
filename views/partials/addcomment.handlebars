@@ -1,14 +1,15 @@
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class="add-comment card">
+  <div class="card-header">
     <h3>Add a Comment:</h3>
-
+  </div>
+  <div class="card-body">
     <form class="form add-comment-form" id="add-comment-form">
       <div class="form-group">
-        <label for="blog-comment">comment:</label>
+        <label for="blog-comment">Comment:</label>
         <textarea class="form-input" id="blog-comment" name="blog-comment"></textarea>
       </div>
       <div class="add-comment">
-        <button type="submit" class="btn btn-primary" id="commentBtn" data-id="{{id}}">Add Comment</button>
+        <button type="submit" class="btn" id="commentBtn" data-id="{{id}}">Add Comment</button>
       </div>
     </form>
   </div>

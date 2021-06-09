@@ -1,19 +1,20 @@
-<div class="row mt-4">
-  <div class="col-md-6">
+<div class="card">
+  <div class="card-header">
     <h3>Update your Blog Post:</h3>
-
+  </div>
+  <div class="card-body">
     <form class="form update-blog-form" id="update-blog-form">
       <div class="form-group">
-        <label for="blog-title">blog title:</label>
+        <label for="blog-title">Blog Title:</label>
         <input class="form-input" type="text" id="blog-title" name="blog-title" value="{{title}}" />
       </div>
       <div class="form-group">
-        <label for="blog-content">content:</label>
+        <label for="blog-content">Content:</label>
         <textarea class="form-input" id="blog-content" name="blog-content">{{content}}</textarea>
       </div>
       <div class="update-form-group">
-        <button type="submit" class="btn btn-primary" id="updateBtn" data-id="{{id}}">Save Update</button>
-        <button class="btn btn-sm btn-danger" id="deleteBtn" data-id="{{id}}">Delete Blog Post</button>
+        <button type="submit" class="btn" id="updateBtn" data-id="{{id}}">Save Update</button>
+        <button class="btn" id="deleteBtn" data-id="{{id}}">Delete Blog Post</button>
       </div>
     </form>
   </div>
