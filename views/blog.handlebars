@@ -10,11 +10,35 @@
       {{content}}
     </p>
   </div>
-  <div> --}}
-    {{> blog-simple }}
-
+  <div>
+    {{!-- {{> blog-simple }} --}}
+{{!-- 
     {{> comments blog.comments }}
     
     {{#if ../logged_in}}
       {{> addcomment }}
+    {{/if}} --}}
+
+<div class="blog card">
+  <div class="card-header">
+    <h2>
+      <a href="/blog/{{id}}"></a>{{title}}</a>
+    </h2>
+    <p>Created by {{user.name}} on {{format_date date_created}}</p>
+  </div>
+  <div class="card-body">
+    <p>
+      {{content}}
+    </p>
+  </div>
+  <div>
+      {{> comments blog.comments }}
+    {{#if logged_in}}
+      {{> addcomment }}
     {{/if}}
+  </div>
+</div>
+ {{!-- {{> comments blog.comments }}
+    {{#if logged_in}}
+      {{> addcomment }}
+    {{/if}} --}}
