@@ -1,12 +1,6 @@
-<div class="row">
-  <div class="col-auto">
-    <h2>Welcome, {{name}}!</h2>
-  </div>
-</div>
-
 <div class="card">
   <div class="card-header">
-    <h3>Create a New Blog:</h3>
+    <h5>Create a New Blog:</h5>
   </div>
   <div class="card-body">
     <form class="form new-blog-form" id="new-blog-form">
@@ -28,19 +22,19 @@
 {{#if blogs.length}}
 <div class="card blog-list">
   <div class="card-header">
-    <h3>Your Current Blogs:</h3>
+    <h5>Your Current Blogs:</h5>
   </div>
   <div class="card-body">
     {{#each blogs as |blog|}}
-    <div class="row mb-2">
-      <div class="col-md-8">
-        <h4><a href="/blog/{{blog.id}}">{{blog.title}}</a></h4>
-      </div>
-      <a href="/dashboard/update/{{blog.id}}" class="update">Update Post</a>
-    </div>
+      <h6><a href="/dashboard/update/{{blog.id}}" class="update">
+        <div class="card-item">
+          {{format_text blog.title}}
+        </div>
+      </a></h6>
     {{/each}}
   </div>
-  {{/if}}
 </div>
+{{/if}}
+
 
 <script src="/js/dashboard.js"></script>

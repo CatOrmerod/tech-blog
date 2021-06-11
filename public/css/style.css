@@ -1,61 +1,123 @@
 :root {
-	--lightest: #ccd7da;
-	--lighter: #9c9cae;
-	--mid-light: #7e7885;
-	--light-dark: #71658f;
-	--dark: #2f2e38;
-	--border-radius: .3rem;
+  --lightest: #ccd7da;
+  --lighter: #9c9cae;
+  --mid-light: #7e7885;
+  --light-dark: #71658f;
+  --dark: #2f2e38;
+  --border-radius: 0.1rem;
 }
-  
+
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
+  text-decoration: none;
 }
-  
+
 body {
-    background-color: var(--lightest);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: var(--dark);
-    line-height: 1.5;
-    font-size: 16px;
+  background-color: var(--lighter);
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  color: var(--dark);
+  line-height: 1.5;
+  font-size: 16px;
+}
+h1 {
+  font-size: 2.25rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.75rem;
+}
+
+h4 {
+  font-size: 1.5rem;
+}
+
+h5 {
+  font-size: 1.25rem;
+}
+
+h6 {
+  font-size: 1rem;
+}
+
+p {
+  font-size: 1.1rem;
+  margin: 0 0 1rem;
+  line-height: 1.5;
+}
+
+a {
+  color: var(--dark);
 }
 
 .btn {
-    font-size: 16px;
-    text-decoration:none;
-    padding: 10px 5px;
-    width: 100%;
-    display: block;
-    margin: 15px 0;
-    border-radius: var(--border-radius);
-    color: var(--lightest);
-    border: none;
-    outline: none;
-    background-color: var(--light-dark);
-    transform: translate(-1px, -1px);
-}
-  
-.btn:hover {
-    color: var(--lightest);
-    background-color: var(--mid-light);
-    transform: translate(0, 0);
-    box-shadow: 2px 2px var(--dark);
+    font-size: 1.1rem;
+  text-decoration: none;
+  padding: 10px 5px;
+  width: 100%;
+  display: block;
+  margin: 15px 0;
+  border-radius: var(--border-radius);
+  color: var(--lightest);
+  border: none;
+  outline: none;
+  background-color: var(--light-dark);
+  transform: translate(-1px, -1px);
 }
 
- /* Cards Styling */
- .card {
-	border: 2px solid var(--dark);
-	border-radius: var(--border-radius);
+.btn:hover {
+  color: var(--lightest);
+  background-color: var(--mid-light);
+  transform: translate(0, 0);
+  box-shadow: 2px 2px var(--dark);
+}
+
+/* Cards Styling */
+.card {
+  border: 2px solid var(--dark);
+  border-radius: var(--border-radius);
+  margin: 0.625rem 0;
 }
 
 .card-header {
-	color: var(--lightest);
-	background-color: var(--dark);
-	padding: 10px 15px;
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: space-between;
+  color: var(--lightest);
+  background-color: var(--dark);
+  padding: 0.25rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 
 .card-body {
-	padding: 15px;
+  padding: 0.25rem;
+}
+
+form label,
+form .form-label {
+  display: inline-block;
+  margin: 0.625rem 0 0.25rem 0.3rem;
+}
+
+form .form-input {
+  width: 100%;
+  padding: 0.25rem;
+  color: var(--dark);
+  background-color: var(--lightest);
+  margin: 0.625rem 0;
+  border: 1px solid var(--light-dark);
+  border-radius: 0.3rem;
+}
+
+.card-item {
+  margin: 0.625rem 0;
+  padding: 0.25rem;
+  background-color: var(--light-dark);
+  list-style: none;
+  border-radius: var(--border-radius);
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
