@@ -2,16 +2,11 @@
   {
     "name": "Cat",
     "email": "cat.ormerod@gmail.com",
-    "password": "password12345"
+    "password": "password123456"
   },
   {
     "name": "Ian",
     "email": "ian_wally1@hotmail.com",
-    "password": "password12345"
-  },
-  {
-    "name": "Piper",
-    "email": "piper.wallington@gmail.com",
-    "password": "password12345"
+    "password": "password123456"
   }
 ]
