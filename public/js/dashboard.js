@@ -95,6 +95,6 @@ if (newCommentForm) {
   newCommentForm.addEventListener('submit', commentFormHandler);
 }
 const deleteBtn = document.querySelector('#deleteBtn');
-if (delButtonHandler) {
+if (deleteBtn) {
   deleteBtn.addEventListener('click', delButtonHandler);
 }
