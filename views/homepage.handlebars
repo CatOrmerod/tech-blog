@@ -3,23 +3,4 @@
 <a href="/blog/{{blog.id}}">
 {{> blog-simple }}
 </a>
-{{!-- <div class="card">
-  <div class="card-header">
-    <h2>
-      <a href="/blog/{{blog.id}}"></a>{{blog.title}}</a>
-    </h2>
-    <p>Created by {{blog.user.name}} on {{format_date blog.date_created}}</p>
-  </div>
-  <div class="card-body">
-    <p>
-      {{blog.content}}
-    </p>
-  </div>
-  <div>
-      {{> comments blog.comments }}
-    {{#if ../logged_in}}
-      {{> addcomment }}
-    {{/if}}
-  </div>
-</div> --}}
 {{/each}}
