@@ -1,7 +1,7 @@
 # tech-blog
 A CMS-style blog site similar to a Wordpress site, where developers can publish their blog posts and comment on other developers’ posts as well. 
 
-## Description & LIVE DEPLOYED WEBSITE
+## Description
 ---
  (Previously deployed on Heroku — free tier discontinued 2022)  For more information see below.  
 
