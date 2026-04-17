@@ -3,7 +3,7 @@ A CMS-style blog site similar to a Wordpress site, where developers can publish 
 
 ## Description & LIVE DEPLOYED WEBSITE
 ---
-The app can be viewed live [here](https://tech-blog-ormerod.herokuapp.com/).  For more information see below.  
+ (Previously deployed on Heroku — free tier discontinued 2022)  For more information see below.  
 
 
 ## Screenshots
